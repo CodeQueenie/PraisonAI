@@ -36,11 +36,9 @@ def validate_api_keys():
 def get_chat_completion(client, prompt):
     """
     Get chat completion from OpenAI API with error handling
-    
     Args:
         client: OpenAI client instance
         prompt: String prompt to send to API
-        
     Returns:
         dict: Response data including completion text and metadata
     """

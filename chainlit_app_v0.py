@@ -24,3 +24,4 @@ lai.chat.completions.create(
     model="gpt-4o",
     messages=[{ "role": "user", "content": "Hello, how are you?" }]
 )
+
