@@ -6,6 +6,11 @@ chroma.sqlite3
 test
 dist
 .env
+
+*.log
+*.json
+__pycache__/
+
 assets
 .idea
 .DS_Store
