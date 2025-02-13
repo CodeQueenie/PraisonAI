@@ -1,9 +1,5 @@
 conda create --name praisonAI_apps -c conda-forge python=3.12 conda pip
 conda activate praisonAI_apps
-conda env list
-cd C:\Users\ncole\Documents\GitHub\PraisonAI
-pip install praisonaiagents
-pip install -U praisonai
+pip install praisonaiagents praisonai
 pip install literalai
 pip install -r requirements_addons_v2.txt
-## doskey /history

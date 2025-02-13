@@ -1,0 +1,46 @@
+framework: praisonai
+topic: Give me the latest about Boston, Massachusetts, US
+roles:
+  data_collector:
+    backstory: Expert in data gathering and analysis, with a focus on using modern
+      search tools to extract the latest information.
+    goal: Gather relevant and up-to-date information about Boston, Massachusetts,
+      US.
+    role: Data Collector
+    tasks:
+      information_gathering:
+        description: Utilize available tools to collect the latest news, events, and
+          updates about Boston, Massachusetts from trusted websites.
+        expected_output: Document containing collected data and information about
+          the latest happenings in Boston.
+    tools:
+    - ''
+  data_analyst:
+    backstory: Data analyst with a passion for turning raw data into actionable insights,
+      especially for urban developments.
+    goal: Analyze the collected information to identify key insights and trends about
+      Boston.
+    role: Data Analyst
+    tasks:
+      data_analysis:
+        description: Analyze the collected data to extract key insights and identify
+          relevant trends using available tools.
+        expected_output: Analysis report highlighting the key insights and trends
+          in the latest data about Boston.
+    tools:
+    - ''
+  report_creator:
+    backstory: Experienced in synthesizing data into clear and engaging reports that
+      inform and captivate readers.
+    goal: Create a comprehensive report based on analyzed data, highlighting the latest
+      about Boston, Massachusetts, US.
+    role: Report Creator
+    tasks:
+      report_generation:
+        description: Compile the analyzed data into a comprehensive and understandable
+          report to provide the latest insights about Boston.
+        expected_output: Final report document summarizing the latest news, events,
+          and trends in Boston, Massachusetts, US.
+    tools:
+    - ''
+dependencies: []

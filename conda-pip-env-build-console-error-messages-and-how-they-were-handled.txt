@@ -1,0 +1,68 @@
+
+Executing the pip install commands sequentially resulted in the error messages that follow each section:
+
+##################################################################
+
+    pip install praisonaiagents praisonai
+
+resulted in these errors
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+folium 0.16.0 requires numpy, which is not installed.
+markdownlit 0.0.7 requires lxml, which is not installed.
+markdownlit 0.0.7 requires streamlit, which is not installed.
+streamlit-camera-input-live 0.2.0 requires streamlit>=1.2, which is not installed.
+streamlit-echarts 0.4.0 requires streamlit>=0.63, which is not installed.
+streamlit-extras 0.4.0 requires protobuf!=3.20.2, which is not installed.
+streamlit-extras 0.4.0 requires streamlit>=1.0.0, which is not installed.
+streamlit-faker 0.0.3 requires faker, which is not installed.
+streamlit-faker 0.0.3 requires streamlit, which is not installed.
+streamlit-folium 0.18.0 requires streamlit>=1.13.0, which is not installed.
+streamlit-image-coordinates 0.1.6 requires streamlit>=1.2, which is not installed.
+streamlit-keyup 0.2.3 requires streamlit>=1.2, which is not installed.
+
+###################################################################
+
+    pip install literalai
+
+resulted in these errors
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+matplotlib 3.8.3 requires numpy<2,>=1.21, which is not installed.
+matplotlib 3.8.3 requires pillow>=8, which is not installed.
+streamlit-extras 0.4.0 requires streamlit>=1.0.0, which is not installed.
+streamlit-faker 0.0.3 requires faker, which is not installed.
+streamlit-faker 0.0.3 requires streamlit, which is not installed.
+instructor 1.7.2 requires tenacity<10.0.0,>=9.0.0, but you have tenacity 8.5.0 which is incompatible.
+
+
+###################################################################
+
+    pip install -r requirements_addons_v2.txt
+
+resulted in these errors
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+markdownlit 0.0.7 requires streamlit, which is not installed.
+streamlit-echarts 0.4.0 requires streamlit>=0.63, which is not installed.
+streamlit-extras 0.4.0 requires streamlit>=1.0.0, which is not installed.
+streamlit-faker 0.0.3 requires faker, which is not installed.
+streamlit-faker 0.0.3 requires streamlit, which is not installed.
+streamlit-folium 0.18.0 requires streamlit>=1.13.0, which is not installed.
+
+
+###################################################################
+
+    pip install -r streamlit streamlit-aggrid
+
+resulted in these errors
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+streamlit-faker 0.0.3 requires faker, which is not installed.
+
+##################################################################
+
+FINALLY this command resulted in a clean runtime with no warnings or error messages.   
+
+    pip install faker 
+

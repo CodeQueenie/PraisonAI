@@ -3,15 +3,15 @@ TODO: Fix this: DeprecationWarning: Use Literal.initialize instead
   lai.instrument_openai()
 
 """
-
-from literalai import LiteralClient
 import os
-from openai import OpenAI
 import json
-from datetime import datetime
 import logging
+from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
+from openai import OpenAI
+from literalai import LiteralClient
+
 
 # Create output directories
 OUTPUT_DIR = Path("output")
@@ -35,9 +35,7 @@ logging.basicConfig(
 def validate_api_keys():
     """
     Validate that required API keys are present in environment variables
-    
-    Returns:
-        bool: True if all required keys are present, False otherwise
+    Returns:  bool: True if all required keys are present, False otherwise
     """
     required_keys = ["LITERAL_API_KEY", "OPENAI_API_KEY"]
     missing_keys = [key for key in required_keys if not os.getenv(key)]
@@ -50,13 +48,11 @@ def validate_api_keys():
 def get_chat_completion(client, prompt):
     """
     Get chat completion from OpenAI API with error handling
-    
-    Args:
-        client: OpenAI client instance
-        prompt: String prompt to send to API
-        
+    Args:       client: OpenAI client instance
+                prompt: String prompt to send to API
     Returns:
         tuple: (dict with response data, str filepath) or (dict with error, None)
+    Side Effect: this function saves the completion data to a time-stamped file. 
     """
     try:
         response = client.chat.completions.create(
@@ -76,6 +72,7 @@ def get_chat_completion(client, prompt):
         with open(output_filename, 'w', encoding='utf-8') as f:
             json.dump(completion_data, f, indent=4)
             
+        # Return completion_data as 'result'; return absolute path for output_filename
         return completion_data, str(output_filename.absolute())
         
     except Exception as e:
